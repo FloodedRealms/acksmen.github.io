@@ -1,0 +1,220 @@
+/*
+ * style.css
+ * Copyright (C) 2023 kevin
+ *
+ * Distributed under terms of the MIT license.
+ */
+/*
+ * {
+ box-sizing: border-box;
+ } */
+
+:root {}
+
+:root {
+    --bg_h: #f9f5d7;
+    --bg: #fbf1c7;
+    --bg_s: #f2e5bc;
+    --bg1: #ebdbb2;
+    --bg2: #d5c4a1;
+    --bg3: #bdae93;
+    --bg4: #a89984;
+
+    --fg: #282828;
+    --fg1: #3c3836;
+    --fg2: #504945;
+    --fg3: #665c54;
+    --fg4: #7c6f64;
+    --green: #79740e;
+    --yellow: #b57614;
+    --blue: #076678;
+    --purple: #8f3f71;
+    --aqua: #427b58;
+    --orange: #af3a03;
+    --gray: #928374;
+
+    --red-dim: #cc2412;
+    --green-dim: #98971a;
+    --yellow-dim: #d79921;
+    --blue-dim: #458598;
+    --purple-dim: #b16286;
+    --aqua-dim: #689d6a;
+    --orange-dim: #d65d0e;
+    --gray-dim: #7c6f64;
+    color: var(--fg);
+    background-color: var(--bg);
+    --main-color: var(--grey);
+    --main-color-dk: (var(--gray-dim));
+    --accent-1: var(--aqua-dim);
+    --accent-2: var(--blue);
+    --content-spacing: 5px;
+    --text-color: var(--fg);
+    --link-color: var(--green);
+    --border: 1px solid black;
+}
+
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Courier";
+}
+
+body {
+    color: var(--text-color);
+    background-attachment: fixed;
+}
+
+.topbar {
+    height: 150px;
+    margin-bottom: var(--content-spacing);
+    border: var(--border);
+}
+
+#container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+#container a {
+    color: var(--link-color);
+}
+
+#container {
+    border-top: none;
+}
+
+#flex {
+    display: flex;
+    max-width: 850px;
+}
+
+aside {
+    width: 30%;
+    margin-left: var(--content-spacing);
+    border-left: var(--border);
+    background-color: var(--background);
+}
+
+.title,
+.sidebar-title {
+    font-weight: bold;
+    border: var(--border);
+    font-size: 20px;
+}
+
+main {
+    width: 74%;
+    background-color: var(--background);
+}
+
+.buttons {
+    position: sticky;
+    top: 20px;
+}
+
+.buttons ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 30px;
+}
+
+.buttons ul li a {
+    color: var(--accent-1);
+}
+
+.content {
+    padding: 25px;
+}
+
+footer {
+    border: var(--border);
+    height: 25px;
+    margin-top: var(--content-spacing);
+    text-align: center;
+}
+
+#themeDiv {
+    position: sticky;
+    top: 550px;
+}
+
+@media only screen and (max-width: 640px) {
+    nav ul {
+        list-style-image: none;
+        list-style-type: none;
+    }
+
+    #flex {
+        flex-wrap: wrap;
+    }
+
+    main {
+        width: 100%;
+        order: 2;
+    }
+
+    aside {
+        display: block;
+        width: 100%;
+        order: 1;
+        margin-left: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        padding-right: 10px;
+    }
+
+    nav ul>ul {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 640px) {
+    nav ul>ul {
+        display: none;
+    }
+}
+
+/*! CSS Used from: Embedded */
+.copyButton {
+    width: 88px;
+    font-size: 10px;
+    background-color: black;
+    color: #79DC77;
+    height: 21px;
+    margin-bottom: 10px;
+}
+
+/*! CSS Used from: Embedded */
+.update {
+    border: 2px dashed var(--main-color);
+    padding: 5px;
+}
+
+main {
+    background-color: transparent !important;
+}
+
+.content {
+    background-color: var(--background);
+}
+
+.title {
+    margin-top: var(--content-spacing);
+}
+
+.title:first-child {
+    margin-top: 0 !important;
+}
+
+.main-button {
+    display: flex;
+    margin: 0 auto;
+    width: 150px;
+}
